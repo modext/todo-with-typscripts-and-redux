@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { Loader } from './features/loader/Loader';
+const Modal = React.lazy(() => import('./features/modal/Modal'));
+const Todos = React.lazy(() => import('./features/todos/Todos'));
+const Navbar = React.lazy(() => import('./features/navbar/Navbar'));
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Suspense fallback={<Loader />}>
+      <Navbar />
+      <Modal />
+      <Todos />
+    </React.Suspense>
   );
-}
+};
 
 export default App;
