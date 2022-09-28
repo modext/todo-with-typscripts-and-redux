@@ -15,6 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
+    '@react-native-community',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
@@ -30,7 +31,7 @@ module.exports = {
     },
   },
   rules: {
-    "prettier/prettier": ["error", { endOfLine: "all" }],
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
     'import/extensions': [
       'error',
       'ignorePackages',
