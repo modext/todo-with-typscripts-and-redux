@@ -20,7 +20,7 @@ const Modal = (): JSX.Element => {
       dispatch(toggleModal());
       const targetTodo: Todo = todos.find(
         (todo: Todo) => todo.isEditing === true
-      );
+      )!;
       console.log("Edit Target Todo", targetTodo);
     }
   }, [todos]);

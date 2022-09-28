@@ -1,14 +1,15 @@
 import * as React from 'react';
+import {useState} from 'react';
 import { isOpen } from '../features/modal/modalSlice';
 import { useAppSelector } from '../hooks/useAppSelector';
 
 export const useIsClickOutside = (initialState: boolean) => {
-  const ref = React.useRef(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   const isModalOpen = useAppSelector(isOpen);
   const [isClickOutside, setisClickOutside] = React.useState(initialState);
 
   const handleClickOutside = (event: MouseEvent): void => {
-    if (ref.current && !ref.current.contains(event.target)) {
+    if (ref.current && !ref.current.contains(event.target as Node)) {
       setisClickOutside(true);
     }
   };

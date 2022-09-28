@@ -9,7 +9,7 @@
   height: 85px;
   letter-spacing: 2px;
   font-size: 2rem;
-  background-color: #09192f;
+  background-color: #6b4b69;
   box-shadow: 0px 1px 10px #000;
   z-index: 1;
 }
@@ -23,7 +23,7 @@
 
 .count > span {
   margin-left: 5px;
-  color: #45ac9f;
+  color: #f907f9;
   cursor: pointer;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .icon {
-  color: #45ac9f;
+  color: #f907f9;
   width: 40px;
   height: 40px;
   margin-top: 1.25rem;
