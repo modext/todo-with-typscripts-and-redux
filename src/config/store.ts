@@ -1,12 +1,12 @@
-import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
-import todosReducer from '../features/todos/todosSlice';
-import modalReducer from '../features/modal/modalSlice';
+import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
+import todosReducer from "../features/todos/todosSlice";
+import modalReducer from "../features/modal/modalSlice";
 
 export const store = configureStore({
   reducer: {
     todos: todosReducer,
-    modal: modalReducer,
-  },
+    modal: modalReducer
+  }
 });
 
 export type RootState = ReturnType<typeof store.getState>;

@@ -1,11 +1,11 @@
-import * as React from 'react';
-import dateFormat from 'dateformat';
-import { HiPlusCircle } from '@react-icons/all-files/hi/HiPlusCircle';
-import styles from './Navbar.module.css';
-import { toggleModal } from '../modal/modalSlice';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { useAppSelector } from '../../hooks/useAppSelector';
-import { selectTodos, deleteAllTodos } from '../todos/todosSlice';
+import * as React from "react";
+import dateFormat from "dateformat";
+import { HiPlusCircle } from "@react-icons/all-files/hi/HiPlusCircle";
+import styles from "./Navbar.module.css";
+import { toggleModal } from "../modal/modalSlice";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { selectTodos, deleteAllTodos } from "../todos/todosSlice";
 
 const Navbar = (): JSX.Element => {
   const dispatch = useAppDispatch();
@@ -14,13 +14,13 @@ const Navbar = (): JSX.Element => {
 
   const renderDisplayDate = (): string => {
     const today = Date.now();
-    return dateFormat(today, 'mmmm dS');
+    return dateFormat(today, "mmmm dS");
   };
 
   const onDeleteAllTodos = () => dispatch(deleteAllTodos());
 
   const renderClearTasks = (): string | undefined => {
-    return todos.length === 0 ? undefined : 'CLEAR ALL';
+    return todos.length === 0 ? undefined : "CLEAR ALL";
   };
 
   return (

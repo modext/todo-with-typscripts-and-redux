@@ -1,13 +1,13 @@
-import * as React from 'react';
-import styles from './Todos.module.css';
-import { selectTodos } from './todosSlice';
-import { Header } from './components/Header';
-import { useEscape } from '../../hooks/useEscape';
-import { isOpen, toggleModal } from '../modal/modalSlice';
-import { editTodo, deleteTodo } from './todosSlice';
-import { useAppDispatch } from '../../hooks/useAppDispatch';
-import { useAppSelector } from '../../hooks/useAppSelector';
-import { AiOutlineDelete } from '@react-icons/all-files/ai/AiOutlineDelete';
+import * as React from "react";
+import styles from "./Todos.module.css";
+import { selectTodos } from "./todosSlice";
+import { Header } from "./components/Header";
+import { useEscape } from "../../hooks/useEscape";
+import { isOpen, toggleModal } from "../modal/modalSlice";
+import { editTodo, deleteTodo } from "./todosSlice";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { AiOutlineDelete } from "@react-icons/all-files/ai/AiOutlineDelete";
 
 const Todos = (): JSX.Element => {
   const dispatch = useAppDispatch();

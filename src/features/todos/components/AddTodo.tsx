@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import styles from './AddTodo.module.css';
-import { useAppDispatch } from '../../../hooks/useAppDispatch';
-import { addTodo } from '../todosSlice';
-import { toggleModal } from '../../modal/modalSlice';
+import * as React from "react";
+import { v4 as uuidv4 } from "uuid";
+import styles from "./AddTodo.module.css";
+import { useAppDispatch } from "../../../hooks/useAppDispatch";
+import { addTodo } from "../todosSlice";
+import { toggleModal } from "../../modal/modalSlice";
 
 interface Todo {
   id: string;
@@ -21,7 +21,7 @@ export const AddTodo = (): JSX.Element => {
       id: uuidv4(),
       text: todoRef.current!.value,
       isEditing: false,
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString()
     };
   };
 

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Header.module.css';
-import { useAppDispatch } from '../../../hooks/useAppDispatch';
-import { toggleModal } from '../../modal/modalSlice';
+import * as React from "react";
+import PropTypes from "prop-types";
+import styles from "./Header.module.css";
+import { useAppDispatch } from "../../../hooks/useAppDispatch";
+import { toggleModal } from "../../modal/modalSlice";
 
 export const Header = ({ hasTodos }: { hasTodos: boolean }): JSX.Element => {
   const dispatch = useAppDispatch();
@@ -18,7 +18,7 @@ export const Header = ({ hasTodos }: { hasTodos: boolean }): JSX.Element => {
           <div className={styles.line}></div>
           <main>
             <h3 className={styles.subheader}>
-              You have no open tasks,{' '}
+              You have no open tasks,{" "}
               <span onClick={() => dispatch(toggleModal())}>
                 create a task.
               </span>
@@ -31,5 +31,5 @@ export const Header = ({ hasTodos }: { hasTodos: boolean }): JSX.Element => {
 };
 
 Header.propTypes = {
-  hasTodos: PropTypes.bool.isRequired,
+  hasTodos: PropTypes.bool.isRequired
 };

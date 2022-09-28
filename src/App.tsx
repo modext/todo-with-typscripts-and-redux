@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Loader } from './features/loader/Loader';
-const Modal = React.lazy(() => import('./features/modal/Modal'));
-const Todos = React.lazy(() => import('./features/todos/Todos'));
-const Navbar = React.lazy(() => import('./features/navbar/Navbar'));
+import * as React from "react";
+import { Loader } from "./features/loader/Loader";
+const Modal = React.lazy(() => import("./features/modal/Modal"));
+const Todos = React.lazy(() => import("./features/todos/Todos"));
+const Navbar = React.lazy(() => import("./features/navbar/Navbar"));
 
 const App: React.FC = () => {
   return (

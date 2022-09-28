@@ -1,7 +1,7 @@
-import * as React from 'react';
-import {useState} from 'react';
-import { isOpen } from '../features/modal/modalSlice';
-import { useAppSelector } from '../hooks/useAppSelector';
+import * as React from "react";
+import { useState } from "react";
+import { isOpen } from "../features/modal/modalSlice";
+import { useAppSelector } from "../hooks/useAppSelector";
 
 export const useIsClickOutside = (initialState: boolean) => {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -21,9 +21,9 @@ export const useIsClickOutside = (initialState: boolean) => {
   }, [isModalOpen]);
 
   React.useEffect(() => {
-    document.addEventListener('click', handleClickOutside, true);
+    document.addEventListener("click", handleClickOutside, true);
     return () => {
-      document.removeEventListener('click', handleClickOutside, true);
+      document.removeEventListener("click", handleClickOutside, true);
     };
   }, []);
 

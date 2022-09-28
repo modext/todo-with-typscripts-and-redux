@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { useAppSelector } from './useAppSelector';
-import { isOpen } from '../features/modal/modalSlice';
+import * as React from "react";
+import { useAppSelector } from "./useAppSelector";
+import { isOpen } from "../features/modal/modalSlice";
 
 export const useEscape = () => {
   const isModalOpen = useAppSelector(isOpen);
@@ -8,7 +8,7 @@ export const useEscape = () => {
 
   const onEscape = React.useCallback(
     (event: KeyboardEvent) => {
-      const isEscape: boolean = event.key === 'Escape';
+      const isEscape: boolean = event.key === "Escape";
       if (isEscape && isModalOpen) {
         setIsEscapeEvent(true);
       }
@@ -17,14 +17,14 @@ export const useEscape = () => {
   );
 
   React.useEffect(() => {
-    document.addEventListener('keydown', onEscape);
+    document.addEventListener("keydown", onEscape);
     return () => {
-      document.removeEventListener('keydown', onEscape);
+      document.removeEventListener("keydown", onEscape);
     };
   }, [onEscape]);
 
   return {
     isEscapeEvent,
-    setIsEscapeEvent,
+    setIsEscapeEvent
   };
 };

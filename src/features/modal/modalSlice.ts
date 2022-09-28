@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../../config/store';
+import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../config/store";
 
 interface InitialState {
   isOpen: boolean;
@@ -8,17 +8,17 @@ interface InitialState {
 
 const initialState: InitialState = {
   isOpen: false,
-  text: '',
+  text: ""
 };
 
 export const modalSlice = createSlice({
-  name: 'modal',
+  name: "modal",
   initialState,
   reducers: {
     toggleModal: state => {
       state.isOpen = !state.isOpen;
-    },
-  },
+    }
+  }
 });
 
 export const { toggleModal } = modalSlice.actions;
