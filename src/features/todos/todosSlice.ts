@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../config/store";
 
 const initialState = {
-  todos: [] as Todo[]
+  todos: [] as Todo[],
 };
 
 export const todosSlice = createSlice({
@@ -29,13 +29,13 @@ export const todosSlice = createSlice({
     },
     deleteTodo: (state, action: PayloadAction<Todo>): void => {
       state.todos = state.todos.filter(
-        (todo: Todo) => todo.id !== action.payload.id
+        (todo: Todo) => todo.id !== action.payload.id,
       );
     },
     deleteAllTodos: (state): void => {
       state.todos = [];
-    }
-  }
+    },
+  },
 });
 
 export const {
@@ -44,7 +44,7 @@ export const {
   saveTodo,
   resetEdit,
   deleteTodo,
-  deleteAllTodos
+  deleteAllTodos,
 } = todosSlice.actions;
 
 export const selectTodos = (state: RootState) => state.todos;

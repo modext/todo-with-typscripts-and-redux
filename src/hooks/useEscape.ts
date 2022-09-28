@@ -13,7 +13,7 @@ export const useEscape = () => {
         setIsEscapeEvent(true);
       }
     },
-    [isModalOpen, isEscapeEvent, setIsEscapeEvent]
+    [isModalOpen, isEscapeEvent, setIsEscapeEvent],
   );
 
   React.useEffect(() => {
@@ -25,6 +25,6 @@ export const useEscape = () => {
 
   return {
     isEscapeEvent,
-    setIsEscapeEvent
+    setIsEscapeEvent,
   };
 };

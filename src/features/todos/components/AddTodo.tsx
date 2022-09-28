@@ -21,7 +21,7 @@ export const AddTodo = (): JSX.Element => {
       id: uuidv4(),
       text: todoRef.current!.value,
       isEditing: false,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
   };
 

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState } from "react";
 import { isOpen } from "../features/modal/modalSlice";
 import { useAppSelector } from "../hooks/useAppSelector";
 

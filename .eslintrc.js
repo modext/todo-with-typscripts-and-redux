@@ -6,60 +6,63 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  plugins: ['react'],
+  plugins: ["react"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 2020,
-    sourceType: 'module',
+    sourceType: "module",
   },
   extends: [
-    
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
   ],
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
-    'import/resolver': {
+    "import/resolver": {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
     },
   },
   rules: {
     "prettier/prettier": ["error", { endOfLine: "auto" }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
+    "import/extensions": [
+      "error",
+      "ignorePackages",
       {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
       },
     ],
-    'react/jsx-filename-extension': [
+    "react/jsx-filename-extension": [
       2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      { extensions: [".js", ".jsx", ".ts", ".tsx"] },
     ],
   },
   overrides: [
     {
-      files: ['*.{ts,tsx}'],
-      parser: '@typescript-eslint/parser',
+      files: ["*.{ts,tsx}"],
+      parser: "@typescript-eslint/parser",
       parserOptions: {
         ecmaVersion: 2020,
-        project: './tsconfig.json',
+        project: "./tsconfig.json",
       },
-      plugins: ['@typescript-eslint', 'import'],
-      extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended'],
+      plugins: ["@typescript-eslint", "import"],
+      extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+      ],
       rules: {
-        'no-console': 0,
-        '@typescript-eslint/no-explicit-any': 0,
+        "no-console": 0,
+        "@typescript-eslint/no-explicit-any": 0,
       },
     },
   ],

@@ -31,5 +31,5 @@ export const Header = ({ hasTodos }: { hasTodos: boolean }): JSX.Element => {
 };
 
 Header.propTypes = {
-  hasTodos: PropTypes.bool.isRequired
+  hasTodos: PropTypes.bool.isRequired,
 };

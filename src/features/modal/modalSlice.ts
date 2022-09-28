@@ -8,7 +8,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   isOpen: false,
-  text: ""
+  text: "",
 };
 
 export const modalSlice = createSlice({
@@ -17,8 +17,8 @@ export const modalSlice = createSlice({
   reducers: {
     toggleModal: state => {
       state.isOpen = !state.isOpen;
-    }
-  }
+    },
+  },
 });
 
 export const { toggleModal } = modalSlice.actions;
