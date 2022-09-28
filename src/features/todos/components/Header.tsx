@@ -12,7 +12,7 @@ export const Header = ({ hasTodos }: { hasTodos: boolean }): JSX.Element => {
         <div className={styles.container}>
           <header>
             <h1 className={styles.header}>
-              React, Redux, Typescript Todo App
+              React, Redux, Typescript Todo Task-Manager
             </h1>
           </header>
           <div className={styles.line}></div>
