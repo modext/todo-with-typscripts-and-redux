@@ -30,7 +30,7 @@ module.exports = {
     },
   },
   rules: {
-    "prettier/prettier": ["error", { endOfLine: "auto" }],
+    "prettier/prettier": ["error", { endOfLine: "all" }],
     'import/extensions': [
       'error',
       'ignorePackages',
