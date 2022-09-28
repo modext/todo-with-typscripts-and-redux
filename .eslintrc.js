@@ -15,7 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   extends: [
-    '@react-native-community',
+    
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
