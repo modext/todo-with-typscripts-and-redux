@@ -12,8 +12,6 @@ const Navbar = (): JSX.Element => {
   const { todos } = useAppSelector(selectTodos);
   const onToggleModal = () => dispatch(toggleModal());
 
-  console.log(dateFormat)
-
   const renderDisplayDate = (): string => {
     const today = Date.now();
     return dateFormat(today, 'mmmm dS');
